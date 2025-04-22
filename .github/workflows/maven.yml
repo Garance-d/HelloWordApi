@@ -33,3 +33,10 @@ jobs:
       run: mvn clean install
     - name: lancer un test
       run: mvn test
+
+    - name: 'Upload Artifact'
+      uses: action/upload-artifact@v4
+      with:
+        name: my-artefact
+        path: my-file.txt
+        retention-day: 90
